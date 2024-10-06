@@ -1,0 +1,67 @@
+
+REST ASSURED -
+---------------------
+-> Rest-Assured is a popular Java-based library used for testing and automating RESTful APIs.
+   It simplifies the process of sending HTTP requests, receiving responses, and validating API interactions without needing to manually construct complex HTTP requests.
+   Rest-Assured is built on top of the Java HTTP client, and it integrates seam-lessly with testing frameworks like JUnit and TestNG.
+
+
+KEY FEATURES OF REST ASSURED -
+----------------------------------
+1. Fluent API:
+	-> Provides a clean, readable, and expressive syntax that is easy to understand, especially for writing BDD-style test cases.
+2. Supports Multiple HTTP Methods:
+	-> Easily test GET, POST, PUT, DELETE, PATCH, and other HTTP methods.
+3. Built-in Support for JSON and XML:
+	-> Automatically handles JSON and XML data in requests and responses, and provides powerful JSON/XML path validation mechanisms.
+4. Easy Integration with Testing Frameworks:
+	-> It integrates well with JUnit, TestNG, and other Java testing frameworks.
+5. Request and Response Specification:
+	-> Offers a way to define reusable request and response specifications, reducing code duplication.
+6. Support for Authentication:
+ -> Provides built-in support for various types of authentication, including OAuth, Basic Authentication, etc.
+
+
+MAVEN DEPENDENCIES FOR REST ASSURED -
+---------------------------------------------
+1. Rest-Assured Core Dependency: This is the main dependency for using Rest-Assured.
+2. JSON Path Support: This allows you to parse and manipulate JSON in responses.
+3. XML Path Support: This allows you to parse XML responses using XPath expressions.
+4. Hamc-rest (Optional): For writing expressive assertions, Hamc-rest matchers are often used with Rest-Assured.
+5. JUnit (Optional, if you're using JUnit): To run Rest-Assured tests with JUnit, you can add JUnit dependencies (for both JUnit 4 or 5).
+6. TestNG (Optional, if you're using TestNG): To run Rest-Assured tests with TestNG
+7. JSON Schema Validation (Optional): For validating JSON response against a JSON schema.
+8. Spring Integration (Optional): If you're testing APIs built using Spring Boot, you might want to integrate Rest-Assured with Spring.
+
+
+STATIC IMPORTS -
+--------------------
+-> In Rest-Assured, static imports are used to make the code more readable and concise, especially for methods like given(), when(), then(), etc.
+   These methods are part of the Rest-Assured API and are frequently used when writing tests. By using static imports, you can call these methods
+   directly without needing to prepend the class name.
+-> Common Static imports are -
+		1. import static io.restassured.RestAssured.*;
+			-> This import allows you to use given(), when(), then(), and other Rest-Assured methods without specifying the RestAssured class name.
+		2. import static io.restassured.matcher.RestAssuredMatchers.*;
+			-> Use this import to access Rest-Assured's built-in matchers for validating responses.
+			   These include matchers for things like validating specific headers, content types, etc.
+		3. import static org.hamcrest.Matchers.*;
+			-> Hamc-rest matchers are commonly used for asserting conditions in Rest-Assured tests.
+			   This import allows you to write expressive assertions like equalTo(), containsString(), hasItems(), etc.
+
+given(), when(), and then() methods -
+-------------------------------------------
+-> Rest-Assured follows a given-when-then structure, similar to Behavior-Driven Development (BDD).
+1. given(): Specifies the request configuration (headers, parameters, etc.).
+2. when(): Defines the HTTP method (GET, POST, etc.).
+3. then(): Validates the response (status code, body, headers, etc.).				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
